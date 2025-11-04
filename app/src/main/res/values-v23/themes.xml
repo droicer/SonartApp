@@ -1,4 +1,69 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.Sonart" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/primary_purple</item>
+        <item name="colorPrimaryVariant">@color/primary_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Colores secundarios -->
+        <item name="colorSecondary">@color/primary_purple</item>
+        <item name="colorSecondaryVariant">@color/primary_purple_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Colores de fondo y superficie -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+
+        <!-- Colores de error -->
+        <item name="colorError">#FF5252</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Estilos de componentes -->
+        <item name="buttonStyle">@style/Widget.Sonart.Button</item>
+        <item name="textInputStyle">@style/Widget.Sonart.TextInputLayout</item>
+        <item name="materialCardViewStyle">@style/Widget.Sonart.CardView</item>
+
+        <!-- Barra de navegación inferior -->
+        <item name="bottomNavigationStyle">@style/Widget.Sonart.BottomNavigationView</item>
+    </style>
+
+    <!-- Estilo personalizado para botones -->
+    <style name="Widget.Sonart.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary_purple</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">25dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Estilo para campos de texto -->
+    <style name="Widget.Sonart.TextInputLayout" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/card_background</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Estilo para Cards -->
+    <style name="Widget.Sonart.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- Estilo para Bottom Navigation -->
+    <style name="Widget.Sonart.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/surface_dark</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+    </style>
 
     <style name="Theme.Sonart" parent="Base.Theme.Sonart">
         <!-- Transparent system bars for edge-to-edge. -->

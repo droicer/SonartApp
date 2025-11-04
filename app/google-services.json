@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "409354662427",
+    "project_id": "sonartapp-54658",
+    "storage_bucket": "sonartapp-54658.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409354662427:android:be13701f1b368047a2febe",
+        "android_client_info": {
+          "package_name": "com.music.sonart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409354662427-rar4132kfs4kc99ihq68l8424j1g72do.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.music.sonart",
+            "certificate_hash": "96ba4a217a06ed7b535fc62e6f80e7ca1d25f841"
+          }
+        },
+        {
+          "client_id": "409354662427-iqmnud640bcqgf54r47fo8upl9rbkfce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ylYOaurbe2KIO1StL4w8JH8zl0qnQJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409354662427-iqmnud640bcqgf54r47fo8upl9rbkfce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

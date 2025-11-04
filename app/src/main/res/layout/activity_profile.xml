@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:background="@color/surface_dark"
+            android:elevation="4dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Volver"
+                android:src="@android:drawable/ic_menu_revert" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mi Perfil"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Scroll con todo el contenido -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <!-- Foto de perfil -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="65dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="@color/card_background">
+
+                    <ImageView
+                        android:id="@+id/ivProfilePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:contentDescription="Foto de perfil"
+                        android:background="@color/surface_dark" />
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnChangePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cambiar foto"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_purple"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:backgroundTint="@android:color/transparent"
+                    style="?attr/borderlessButtonStyle" />
+
+                <!-- Información del usuario -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="email@ejemplo.com"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Ingresa tu nombre"
+                            android:inputType="textPersonName"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Botones -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar cambios"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primary_purple"
+                    android:layout_marginTop="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnCreateArtist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crear perfil de artista"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_purple"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_marginTop="12dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:textSize="16sp"
+                    app:strokeColor="@color/primary_purple"
+                    app:strokeWidth="2dp"
+                    style="?attr/materialButtonOutlinedStyle" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mini_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:elevation="20dp"
+        android:translationZ="20dp"
+       />
+
+</FrameLayout>

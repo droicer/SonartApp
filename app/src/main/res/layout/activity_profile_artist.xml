@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark">
+
+    <!-- Barra superior con flecha de retroceso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:background="@color/surface_dark"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Perfil de Artista"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Sección: Información básica -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información básica"
+                android:textSize="14sp"
+                android:textColor="@color/primary_purple"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre artístico"
+                        android:textColorHint="@color/text_hint"
+                        app:hintTextColor="@color/text_secondary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/primary_purple">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etStageName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Género musical"
+                        android:textColorHint="@color/text_hint"
+                        app:hintTextColor="@color/text_secondary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/primary_purple"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGenre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Biografía"
+                        android:textColorHint="@color/text_hint"
+                        app:hintTextColor="@color/text_secondary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/primary_purple"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="3"
+                            android:gravity="top"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sección: Redes sociales -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redes sociales"
+                android:textSize="14sp"
+                android:textColor="@color/primary_purple"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Instagram"
+                        android:textColorHint="@color/text_hint"
+                        app:hintTextColor="@color/text_secondary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/primary_purple"
+                        app:startIconDrawable="@android:drawable/ic_menu_share"
+                        app:startIconTint="@color/text_secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etInstagram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="YouTube"
+                        android:textColorHint="@color/text_hint"
+                        app:hintTextColor="@color/text_secondary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/primary_purple"
+                        app:startIconDrawable="@android:drawable/ic_menu_share"
+                        app:startIconTint="@color/text_secondary"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etYoutube"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botones de acción -->
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actualizar perfil"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary_purple"
+                android:layout_marginTop="32dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar perfil de artista"
+                android:textAllCaps="false"
+                android:textColor="@color/color_boton_red"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="16sp"
+                app:strokeColor="@color/color_texto_rojo"
+                app:strokeWidth="2dp"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
