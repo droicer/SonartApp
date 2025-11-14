@@ -1,4 +1,4 @@
-package com.music.sonart.view;
+package com.music.sonart.view.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.music.sonart.R;
-import com.music.sonart.view.Login.LoginActivity;
 
 public class RecoverPasswordActivity extends AppCompatActivity {
 

@@ -35,7 +35,6 @@ import com.music.sonart.network.ApiService;
 import com.music.sonart.model.User.UserRequest;
 import com.music.sonart.model.User.UserResponse;
 import com.music.sonart.view.User.MenuActivity;
-import com.music.sonart.view.RecoverPasswordActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;

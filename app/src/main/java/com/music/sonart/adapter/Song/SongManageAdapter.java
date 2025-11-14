@@ -1,4 +1,4 @@
-package com.music.sonart.adapter;
+package com.music.sonart.adapter.Song;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.music.sonart.R;
-import com.music.sonart.model.Song;
+import com.music.sonart.model.Song.Song;
 
 import java.util.List;
 

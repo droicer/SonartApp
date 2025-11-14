@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.music.sonart.R;
-import com.music.sonart.model.Song;
+import com.music.sonart.model.Song.Song;
 
 import com.music.sonart.model.player.PlayerManager;
 import com.music.sonart.service.MusicService;

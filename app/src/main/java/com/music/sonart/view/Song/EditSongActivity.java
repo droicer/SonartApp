@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.music.sonart.databinding.ActivityCreateSongBinding;
-import com.music.sonart.model.SongResponse;
+import com.music.sonart.model.Song.SongResponse;
 import com.music.sonart.network.ApiClient;
 import com.music.sonart.network.ApiService;
 import com.music.sonart.view.Artist.ArtistActivity;

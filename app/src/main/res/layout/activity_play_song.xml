@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/background_dark">
 
-    <!-- Barra superior con flecha de retroceso -->
+    <!-- Barra superior -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -26,10 +25,6 @@
             android:src="@android:drawable/ic_menu_revert"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Volver" />
-
-
-
-
     </LinearLayout>
 
     <ScrollView
@@ -43,7 +38,7 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- Portada con play/pause encima -->
+            <!-- Portada -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
@@ -61,15 +56,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:contentDescription="Portada de la canción"
+                        android:contentDescription="Portada"
                         android:src="@drawable/placeholder_image"/>
 
-                    <!-- Overlay oscuro -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#40000000"/>
-
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
@@ -86,16 +79,38 @@
                 android:maxLines="2"
                 android:layout_marginBottom="4dp"/>
 
-            <TextView
-                android:id="@+id/tvArtist"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre del artista"
-                android:textSize="16sp"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="24dp"/>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
 
-            <!-- Barra de progreso -->
+                <TextView
+                    android:id="@+id/tvArtist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nombre del artista"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"/>
+
+                <Button
+                    android:id="@+id/btnFollowArtist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Seguir"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_follow"
+                    android:textColor="@android:color/white"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+            </LinearLayout>
+
+            <!-- SeekBar + Tiempo -->
             <SeekBar
                 android:id="@+id/seekBar"
                 android:layout_width="match_parent"
@@ -135,7 +150,7 @@
                     android:textColor="@color/text_secondary"/>
             </LinearLayout>
 
-            <!-- Botones de control -->
+            <!-- Controles -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,7 +194,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@android:drawable/ic_media_play"
-                        android:contentDescription="Play/ivPlayPause"
+                        android:contentDescription="Play/Pause"
                         android:padding="18dp"/>
                 </androidx.cardview.widget.CardView>
 
@@ -202,6 +217,7 @@
                         android:padding="14dp"/>
                 </androidx.cardview.widget.CardView>
 
+                <!-- LIKE BUTTON + COUNTER -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -213,17 +229,32 @@
                     android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:layout_marginStart="16dp">
 
-                    <ImageView
-                        android:id="@+id/ivLike"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@android:drawable/btn_star_big_off"
-                        android:contentDescription="Me gusta"
-                        android:padding="14dp"/>
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivLike"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_heart_outline"
+                            android:contentDescription="Me gusta"/>
+
+                        <TextView
+                            android:id="@+id/tvLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="10sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!-- Lista de canciones del mismo artista -->
+            <!-- Más canciones -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -256,7 +287,6 @@
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 android:scrollbars="vertical"/>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

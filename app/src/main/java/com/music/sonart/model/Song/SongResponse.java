@@ -1,4 +1,4 @@
-package com.music.sonart.model;
+package com.music.sonart.model.Song;
 
 public class SongResponse {
     private String message;

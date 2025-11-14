@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.music.sonart.adapter.SongManageAdapter;
+import com.music.sonart.adapter.Song.SongManageAdapter;
 import com.music.sonart.databinding.ActivityMySongBinding;
-import com.music.sonart.model.Song;
+import com.music.sonart.model.Song.Song;
 import com.music.sonart.network.ApiClient;
 import com.music.sonart.network.ApiService;
 import com.music.sonart.view.Artist.ArtistActivity;

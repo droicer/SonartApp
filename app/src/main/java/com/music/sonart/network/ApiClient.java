@@ -7,11 +7,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    //private static final String BASE_URL = "http://tu-dominio.com/"; // Reemplaza con la URL de tu API
+    private static final String BASE_URL = "https://apisonart.droicer.com/api/"; // Reemplaza con la URL de tu API
     private static Retrofit retrofit = null;
     //private static final String BASE_URL = "http://10.0.2.2:8000/api/";
-
-    private static final String BASE_URL = "http://10.211.149.170:8000/api/";
+    //private static final String BASE_URL = "http://10.193.32.170:8000/api/";
+    //private static final String BASE_URL = "http://10.254.3.191:8000/api/";
 
 
     public static ApiService getApiService(String token) {

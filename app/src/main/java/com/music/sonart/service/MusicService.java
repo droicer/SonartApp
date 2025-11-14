@@ -17,7 +17,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.media.app.NotificationCompat.MediaStyle;
 
 import com.music.sonart.R;
-import com.music.sonart.model.Song;
+import com.music.sonart.model.Song.Song;
 import com.music.sonart.model.player.PlayerManager;
 import com.music.sonart.view.Song.PlaySongActivity;
 
